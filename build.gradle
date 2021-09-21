@@ -1,0 +1,33 @@
+// The default behavior of the plugins {} block is to immediately resolve and apply the plugins.
+// But, you can use the apply false syntax to tell Gradle not to apply the plugin to the current
+// project and then use the plugins {} block without the version in subprojects' build scripts
+
+plugins {
+    id 'org.springframework.boot' version '2.5.4' apply false
+    id "io.spring.dependency-management" version '1.0.11.RELEASE' apply false
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('springCloudVersion', "3.0.3")
+    set('springdocVersion', "1.5.10")
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation "org.springframework.cloud:spring-cloud-starter-openfeign:$springCloudVersion"
+        implementation "org.springdoc:springdoc-openapi-ui:$springdocVersion"
+    }
+}

@@ -1,0 +1,6 @@
+rootProject.name = 'service'
+
+include 'service-contract'
+include 'service-api'
+include 'service-app'
+
