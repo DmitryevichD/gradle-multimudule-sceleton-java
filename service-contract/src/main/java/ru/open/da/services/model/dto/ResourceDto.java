@@ -1,4 +1,4 @@
-package ru.open.da.services.model;
+package ru.open.da.services.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

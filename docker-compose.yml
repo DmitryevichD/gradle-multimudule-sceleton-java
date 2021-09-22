@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  rabbitmq:
+    container_name: resource-rabbit
+    image: rabbitmq:3.8.14-management-alpine
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RESOURCE_RABBIT_USER}
+      RABBITMQ_DEFAULT_PASS: ${RESOURCE_RABBIT_PASSWORD}
+    ports:
+      - ${RESOURCE_RABBIT_HOST}:${RESOURCE_RABBIT_PORT}:5672
+      - ${RESOURCE_RABBIT_HOST}:${RESOURCE_RABBIT_UI_PORT}:15672
+    volumes:
+      - rabbit_resource_data:/etc/rabbitmq/
+      - rabbit_resource_data:/var/lib/rabbitmq/
+      - rabbit_resource_data:/var/log/rabbitmq/
+    networks:
+      - resource-backend
+
+volumes:
+  rabbit_resource_data:
+
+networks:
+  resource-backend:
+    name: resource-network

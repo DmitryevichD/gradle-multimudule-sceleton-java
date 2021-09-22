@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.open.da.service.service.ResourceService;
 import ru.open.da.services.contract.ResourceRestContract;
-import ru.open.da.services.model.ResourceDto;
+import ru.open.da.services.model.dto.ResourceDto;
 
 import java.util.UUID;
 
