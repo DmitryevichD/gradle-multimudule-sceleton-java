@@ -1,7 +1,7 @@
 package ru.open.da.service.service;
 
-import ru.open.da.services.model.dto.ResourceDto;
-import ru.open.da.services.model.message.ResourceMessage;
+import ru.open.da.service.contract.model.dto.ResourceDto;
+import ru.open.da.service.contract.model.message.ResourceMessage;
 
 import java.util.UUID;
 

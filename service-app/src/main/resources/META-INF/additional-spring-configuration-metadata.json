@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "spring.application.api.enabled",
+      "type": "java.lang.String",
+      "description": "Включает/Выключает авто-конфигурацию api модуля "
+  }
+] }

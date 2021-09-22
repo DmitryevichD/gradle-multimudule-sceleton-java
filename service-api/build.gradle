@@ -1,6 +1,19 @@
 plugins {
     id 'org.springframework.boot'
     id 'io.spring.dependency-management'
+    id 'maven-publish'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'ru.open.da'
+            artifactId = 'service-api'
+            version = '1.0.0'
+
+            from components.java
+        }
+    }
 }
 
 bootJar {
@@ -9,8 +22,4 @@ bootJar {
 
 jar {
     enabled = true
-}
-
-dependencies {
-    implementation project(':service-contract')
 }

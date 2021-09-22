@@ -1,6 +1,5 @@
 package ru.open.da.service.config;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.val;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -8,8 +7,7 @@ import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import ru.open.da.services.contract.ResourceAmqpContract;
-import ru.open.da.services.contract.ResourceRestContract;
+import ru.open.da.service.contract.ResourceAmqpContract;
 
 @Configuration
 @Import(ResourceAmqpContract.class)

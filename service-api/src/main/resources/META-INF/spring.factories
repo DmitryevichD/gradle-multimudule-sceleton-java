@@ -1,4 +1,4 @@
 # Auto Configure
 # There are two different configs used because we should disable feign config in business logic
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-ru.open.da.service.config.RestApiConfiguration
+ru.open.da.service.api.config.ServiceApiConfiguration
