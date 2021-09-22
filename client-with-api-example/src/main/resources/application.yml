@@ -4,6 +4,6 @@ service.api.rest.url: http://localhost:8080
 spring:
   rabbitmq:
     host: ${RESOURCE_RABBIT_HOST}
-    port: 5674
+    port: ${RESOURCE_RABBIT_PORT}
     username: ${RESOURCE_RABBIT_USER}
     password: ${RESOURCE_RABBIT_PASSWORD}
